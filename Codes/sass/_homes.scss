@@ -1,0 +1,85 @@
+
+.homes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include s-phone{
+        grid-template-columns: 1fr;
+    }
+    grid-gap: 32px;
+    .home{
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            top: 0;
+            background-color: $color-secondary;
+            opacity: 0.53;
+        }
+        .detaills{
+            span,a{
+                opacity: 0;
+                transform: translateY(50px);
+                transition: 0.5s;
+                height: 0px;
+                overflow: hidden;
+            }
+            position: absolute;
+            left: 0;
+            // top: 0;
+            bottom: 0;
+            right: 0;
+            color: $color-grey-light-1;
+            padding: 15px;
+            overflow: hidden;
+            z-index: 1;
+            h3{
+                transition: unset;
+                opacity: 1;
+                margin-bottom: 8px;
+            }
+            span{
+                margin-bottom: 8px;
+            }
+            .adress{
+                display: block;
+                opacity: 1;
+                transform: translateY(0px);
+                height: auto;
+                    overflow: unset;
+                i{
+                    color: inherit;
+                }
+            }
+            .surface,.rooms,.price{
+                display: inline-block;
+            }
+            i{
+                color: $color-primary;
+            }
+            a{
+                margin-top: 16px;
+                i{
+                    color: inherit;
+                }
+            }
+            &:hover{
+                span,a{
+                    opacity: 1;
+                    transform: translateY(0px);
+                    height: auto;
+                    overflow: unset;
+                }
+            }
+        }
+    }
+}

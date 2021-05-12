@@ -1,0 +1,25 @@
+#gallery{
+    padding: 0;
+    .container-fluid{
+        padding: 0;
+    }
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    @include s-phone{
+        grid-template-columns: 1fr;   
+    }
+    grid-gap: 5px;
+    padding: 5px;
+    img{
+        border-radius: 5px;
+        width: 100%;
+        // height: 100%;
+        height: 200px;
+        transition: .3s;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+        }
+    }
+}

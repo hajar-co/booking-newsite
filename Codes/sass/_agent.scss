@@ -1,0 +1,26 @@
+.top-3-agents{
+    text-align: center;
+    i{
+        color: $color-primary;
+        font-size: 2rem;
+        display: block;
+    }
+    .top-agent{
+        .agent{
+            display: inline-block;
+            text-align: center;
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                border: 3px solid $color-primary;
+                padding: 3px;
+                margin: 16px;
+                margin-bottom: 8px;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+}

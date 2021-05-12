@@ -1,0 +1,21 @@
+{
+  "dsp_spec_version": "0.0.1",
+  "last_updated_by": "Youcode TijaniClass / Anonymous team Booking_website",
+  "last_updated": "2021-03-08T13:01:47.894Z",
+  "entities": [
+    {
+      "id": "7f1136cc-1621-4a34-b5fd-a03b9cd1d691",
+      "class": "component",
+      "type": "page",
+      "related_entity_ids": [],
+      "snippets": {
+        "trigger": "",
+        "languages": {}
+      },
+      "name": "New component",
+      "tags": [],
+      "last_updated": "2021-03-08T13:05:27.065Z",
+      "last_updated_by": "Youcode TijaniClass / Anonymous team Booking_website"
+    }
+  ]
+}

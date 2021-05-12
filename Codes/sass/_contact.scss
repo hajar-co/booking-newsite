@@ -1,0 +1,53 @@
+.contact{
+    form{
+        max-width: 700px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        .form-group{
+            padding: 8px;
+            .form-control{
+                width: 100%;
+                border: 1px solid $color-light-blue;
+                border-radius: 5px;
+                margin: 0px 8px;
+                padding-left: 8px;
+                height: 40px;
+                color: $color-blue;
+            }
+            &.full-name{
+                width: 50%;
+            }
+            &.email{
+                width: 50%;
+            }
+            &.message{
+                width: 100%;
+                .form-control{
+                    padding-top: 8px;
+                    min-height: 150px;
+                }
+            }
+            &.type{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                > div{
+                    display: flex;
+                    align-items: center;
+                }
+                .form-control{
+                    width: auto;
+                }
+            }
+            &.send{
+                width: 100%;
+                .btn-primary{
+                    border: none;
+                    padding: 15px 32px;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+}

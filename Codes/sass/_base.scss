@@ -1,0 +1,104 @@
+// COLOR VARIABLES
+$color-primary: #F9B90F;
+$color-primary-dark: #0D2843;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #d7e2ec;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$color-blue: #0A84FF;
+$color-light-blue: #73A1C2;
+$color-black-50:rgba(0, 0, 0, 0.50);
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+//============== Responsive ===============//
+@mixin s-phone {
+    @media (max-width: 599px) { @content; }
+}
+@mixin s-tablet-portrait {
+    @media (min-width: 600px) { @content; }
+}
+@mixin s-tablet-landscape {
+    @media (min-width: 900px) { @content; }
+}
+@mixin s-desktop {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin s-big-desktop {
+    @media (min-width: 1800px) { @content; }
+}
+//============== /Responsive ===============//
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%; //10px/16pc = 62.5%  ==> 1rem = 10px
+}
+
+body{
+    font-family: $font-primary;
+    color:$color-grey-dark-2;
+    font-weight:300;
+    line-height:1.6;
+    a{
+        text-decoration: none;
+        // color: inherit;
+    }
+}
+.container{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+.container-fluid{
+    padding: 0px 5vw;
+}
+.btn-primary{
+    background-color: $color-blue;
+    padding: 8px 32px;
+    color: $color-grey-light-1;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.section-title{
+    text-align:center;
+    color: $color-secondary;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 10px;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 7px;
+        width: 70px;
+        background-color: $color-primary;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+main{
+    > section{
+        margin: 0;
+        padding: 64px;
+        @include s-phone{
+            padding: 64px 8px;
+        }
+    }
+}

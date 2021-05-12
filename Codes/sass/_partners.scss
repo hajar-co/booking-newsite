@@ -1,0 +1,14 @@
+.partners{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    @include s-phone{
+        flex-direction: column;
+        text-align: center;
+    }
+    img{
+        width: 150px;
+        height: auto;
+    }
+}
